@@ -5,7 +5,6 @@ from app.config import get_settings, Settings
 
 app = FastAPI()
 
-
 @app.get('/ping')
 async def ping(settings: Settings = Depends(get_settings)):
     return {
